@@ -1,0 +1,28 @@
+Since you're using uv for your COMP9414 project, your .gitignore needs to handle standard Python artifacts as well as specific files created by the uv tool.
+
+Here is a lean, performance-oriented .gitignore template tailored to your setup:
+
+Recommended .gitignore
+Code snippet
+# --- Python Specific ---
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# --- Environment and uv ---
+# uv creates a .venv folder by default
+.venv/
+.python-version
+
+# --- IDE and OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Data and Logs ---
+*.log
+data/
+# Ignore large datasets if you download them for AI labs
+!data/.gitkeep
